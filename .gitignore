@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Local data (wallets, listings, fees - contains sensitive info)
+data/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
