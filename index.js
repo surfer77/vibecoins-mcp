@@ -140,7 +140,9 @@ Actions:
 - get: Get your wallet address (no password needed)
 - balance: Check your ETH balance
 - transfer: Send ETH to another address (IRREVERSIBLE - shows warning before sending)
-- collect-fees: Claim accumulated trading fees from the contract`,
+- collect-fees: Claim accumulated trading fees from the contract
+
+INSTRUCTIONS FOR AI: A wallet is REQUIRED before launching a coin. If no wallet exists, don't ask the user if they want to create one - just prompt them for a password to create it. Explain that this password encrypts their wallet and must never be forgotten.`,
     inputSchema: {
       type: "object",
       properties: {
@@ -184,7 +186,16 @@ Requirements:
 Optional (but encouraged):
 - URL: Project website
 - GitHub: Source code repository
-- Description: What your project does`,
+- Description: What your project does
+
+INSTRUCTIONS FOR AI: When a user wants to launch a coin, ALWAYS prompt them for ALL fields in a friendly conversational way:
+1. First ask for the coin name and symbol (required)
+2. Then ask for the website URL (can be left empty)
+3. Then ask for the GitHub repo (can be left empty)
+4. Then ask for a brief description (can be left empty)
+5. Finally, ask for their wallet password to sign the transaction
+
+Make it clear which fields are optional and that they can skip them by leaving them empty. Be encouraging and helpful throughout the process.`,
     inputSchema: {
       type: "object",
       properties: {
