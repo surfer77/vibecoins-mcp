@@ -308,7 +308,16 @@ Actions:
 - check: View vesting status for a specific token (requires tokenAddress)
 - claim: Claim all available vested tokens (requires tokenAddress and password)
 
-The vesting schedule releases tokens linearly over 6 months from the coin launch date.`,
+The vesting schedule releases tokens linearly over 6 months from the coin launch date.
+
+INSTRUCTIONS FOR AI: When a user wants to check or claim vested tokens but doesn't provide a token address:
+1. First use the 'listings' tool with action='mine' to fetch all tokens the user has launched
+2. Present the user's tokens with their names, symbols, and addresses
+3. If the user has only one token, you can proceed directly with that token
+4. If the user has multiple tokens, ask which token they want to check/claim from
+5. Then call the vesting tool with the selected tokenAddress
+
+This ensures a smooth user experience - users don't need to remember their token addresses.`,
     inputSchema: {
       type: "object",
       properties: {
