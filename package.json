@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.0",
+    "dotenv": "^17.2.3",
     "ethers": "^6.9.0"
   },
   "keywords": [
